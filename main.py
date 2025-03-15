@@ -13,13 +13,22 @@ class Algorithm:
 
 
 def main ():
+
+    if len(sys.argv) > 1:
+        if os.path.exists(sys.argv[1]):
+            print(f"Algorithm 1:{sys.argv[1]}")
+            print(f"Algorithm 2:{sys.argv[2]}")
+
     print("Welcome to Compare Algos") 
     print("Menu:")
     print("1 Create Algorithm")
     print("2 Test Algorithm")
     print("3 Compare Algorithms")
+
+
+
     start = time.perf_counter()
-    time.sleep(5)
+    
     end = time.perf_counter()
     print_stats("Algo2 - Test", start, end,2453)
 
